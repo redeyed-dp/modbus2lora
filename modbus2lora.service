@@ -1,0 +1,12 @@
+[Unit]
+Description=Modbus to LoRa bridge
+After=network-online.target
+Before=homeassistant.service
+
+[Service]
+Type=simple
+WorkingDirectory=/home/redeyed/modbus2lora
+ExecStart=/usr/bin/python3 main.py
+
+[Install]
+WantedBy=multi-user.target
